@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DadNAS Dashboard</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="login-container" class="login-container">
+        <div class="login-form">
+            <h2>DadNAS Login</h2>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Enter password" />
+                <button id="login-btn" onclick="checkPassword()">Login</button>
+            </div>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard (hidden by default) -->
+    <div id="dashboard-container" class="container" style="display: none;">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <span>DadNAS V1.0.1</span>
+            <div class="status-actions">
+                <button class="logout-btn" onclick="logout()">Logout</button>
+                <div class="status-indicator"></div>
+            </div>
+        </div>
+
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <h1>Dad<span class="nas-text">NAS</span> | Dashboard</h1>
+        </div>
+
+        <!-- App Grid -->
+        <div class="app-grid">
+            <!-- Row 1 -->
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="radarr.png" alt="Radarr" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Radarr</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="sabnzbd.png" alt="SABnzbd" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>SABnzbd</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="portainer.png" alt="Portainer" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Portainer</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="sonarr.png" alt="Sonarr" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Sonarr</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="bazarr.png" alt="Bazarr" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Bazarr</div>'">
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="nginx.png" alt="Nginx" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Nginx</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="jellyfin.png" alt="Jellyfin" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Jellyfin</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="jellyseerr.png" alt="Jellyseerr" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Jellyseerr</div>'">
+                </div>
+            </div>
+
+            <div class="app-item">
+                <div class="app-icon white-icon">
+                    <img src="webmin.png" alt="Webmin" class="app-logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'color:#666;font-size:12px;text-align:center;\'>Webmin</div>'">
+                </div>
+            </div>
+
+            <div class="app-item"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
